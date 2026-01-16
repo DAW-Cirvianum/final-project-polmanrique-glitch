@@ -1,0 +1,511 @@
+{
+    "welcome": "Benvingut a React + Vite",
+    "loginLink": "Inicia sessió",
+    "logout": "Tanca la sessió",
+    "login": "Inicia sessió",
+    "user": {
+        "name": "Nom d'usuari"
+    },
+    "common": {
+        "loading": "Carregant...",
+        "confirmAction": "Estàs segur que vols realitzar aquesta acció?",
+        "success": "Acció realitzada amb èxit",
+        "error": "Hi ha hagut un error",
+        "cancel": "Cancel·lar",
+        "save": "Desar",
+        "update": "Actualitzar",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "back": "Tornar",
+        "next": "Següent",
+        "previous": "Anterior",
+        "submit": "Enviar",
+        "reset": "Reiniciar",
+        "search": "Cercar",
+        "filter": "Filtrar",
+        "noResults": "No hi ha resultats",
+        "requiredField": "Aquest camp és obligatori",
+        "invalidEmail": "Correu electrònic no vàlid",
+        "selectOption": "Selecciona una opció"
+    },
+    "landing": {
+        "title": "Gestor d'instituts",
+        "subtitle": "Aplicació per a la gestió de centres educatius",
+        "registerButton": "Registra't",
+        "features": {
+            "title": "Funcionalitats",
+            "enrollments": {
+                "title": "Inscripcions",
+                "description": "Inscriu-te al teu curs i gaudeix d'una educació de qualitat."
+            },
+            "courses": {
+                "title": "Cursos",
+                "description": "Gran varietat de cursos per a totes les persones que volen aprendre."
+            },
+            "teachers": {
+                "title": "Professorat",
+                "description": "Professorat qualificat i amb experiència que ens ajuda a mantenir la qualitat educativa."
+            }
+        },
+        "cta": {
+            "title": "Lorem Ipsum Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "button": "Lorem Ipsum"
+        }
+    },
+    "teachers": {
+        "title": "Professorat",
+        "subtitle": "Llista de tot el professorat",
+        "table": {
+            "id": "ID",
+            "name": "Nom",
+            "surname": "Cognoms",
+            "email": "Correu electrònic",
+            "population": "Població",
+            "actions": "Accions"
+        }
+    },
+    "students": {
+        "addStudent": {
+            "title": "Afegir Estudiant",
+            "subtitle": "Afegir Estudiant",
+            "form": {
+                "name": "Nom",
+                "surname": "Cognoms",
+                "email": "Correu electrònic",
+                "password": "Contrasenya",
+                "population": "Població",
+                "populationPlaceholder": "ID de població",
+                "submitButton": "Afegir estudiant"
+            },
+            "errors": {
+                "requiredFields": "Tots els camps són obligatoris",
+                "invalidData": "Les dades introduïdes no són vàlides",
+                "registrationFailed": "El registre ha fallat"
+            }
+        },
+        "updateStudent": {
+            "title": "Actualitzar Estudiant",
+            "subtitle": "Actualitzar Estudiant",
+            "form": {
+                "name": "Nom",
+                "surname": "Cognoms",
+                "email": "Correu electrònic",
+                "password": "Contrasenya",
+                "population": "Població",
+                "populationPlaceholder": "ID de població",
+                "submitButton": "Actualitzar estudiant"
+            },
+            "errors": {
+                "requiredFields": "Tots els camps són obligatoris",
+                "invalidData": "Les dades introduïdes no són vàlides",
+                "registrationFailed": "El registre ha fallat"
+            }
+        },
+        "title": "Estudiants",
+        "subtitle": "Llista de tots els estudiants",
+        "table": {
+            "id": "ID",
+            "name": "Nom",
+            "surname": "Cognoms",
+            "email": "Correu electrònic",
+            "population": "Població",
+            "actions": "Accions"
+        }
+    },
+    "registrationForm": {
+        "title": "Inscripció al Curs",
+        "subtitle": "Inscriu-te a un curs i consulta els seus mòduls",
+        "backToCourses": "← Tornar als cursos",
+        "enrollButton": "Inscriure's",
+        "confirmEnrollment": "Estàs segur que vols inscriure't a aquest curs?",
+        "successMessage": "Usuari inscrit correctament",
+        "errorMessage": "No s'ha pogut inscriure l'usuari"
+    },
+    "title": {
+        "modules": "Mòduls del Curs"
+    },
+    "label": {
+        "courses": "Cursos"
+    },
+    "alert": {
+        "enrollmentSuccess": "Usuari inscrit correctament",
+        "enrollmentError": "No s'ha pogut inscriure l'usuari",
+        "updateSuccess": "Actualització realitzada amb èxit",
+        "updateError": "Error en actualitzar",
+        "deleteSuccess": "Eliminat correctament",
+        "deleteError": "Error en eliminar",
+        "createSuccess": "Creat correctament",
+        "createError": "Error en crear"
+    },
+    "register": {
+        "title": "Registre",
+        "subtitle": "Crea el teu compte",
+        "form": {
+            "name": "Nom",
+            "surname": "Cognoms",
+            "email": "Correu electrònic",
+            "password": "Contrasenya",
+            "population": "Població",
+            "populationPlaceholder": "ID de població",
+            "submitButton": "Registrar-se"
+        },
+        "errors": {
+            "requiredFields": "Tots els camps són obligatoris",
+            "invalidData": "Les dades introduïdes no són vàlides",
+            "registrationFailed": "El registre ha fallat"
+        }
+    },
+    "profile": {
+        "title": "Perfil d'Usuari",
+        "userInfo": "Informació de l'Usuari",
+        "name": "Nom",
+        "email": "Correu electrònic",
+        "enrolledModules": "Mòduls Inscrits",
+        "incidences": "Incidències",
+        "marks": "Notes"
+    },
+    "myStudents": {
+        "details": "Detalls",
+        "title": "Els Meus Estudiants",
+        "subtitle": "Estudiants Inscrits",
+        "addMark": "Afegir notes",
+        "addIncidence": "Afegir incidències",
+        "loading": "Carregant estudiants...",
+        "deleteStudent": "Eliminar estudiant",
+        "deleteIncidence": "Eliminar incidència",
+        "deleteMark": "Eliminar nota",
+        "updateStudent": "Actualitzar estudiant",
+        "updateIncidence": "Actualitzar incidència",
+        "updateMark": "Actualitzar nota",
+        "viewDetails": "Veure detalls",
+        "confirmDelete": "Estàs segur que vols eliminar aquest element?",
+        "table": {
+            "name": "Nom",
+            "surname": "Cognoms",
+            "email": "Correu electrònic",
+            "actions": "Accions"
+        }
+    },
+    "incidence": {
+        "addIncidence": "Afegir incidència",
+        "updateIncidence": "Actualitzar incidència",
+        "updateSubtitle": "Actualitza els detalls de la incidència",
+        "confirmUpdate": "Estàs segur que vols actualitzar aquesta incidència?",
+        "updateCancelled": "Incidència no actualitzada",
+        "updateSuccess": "Incidència actualitzada correctament",
+        "updateError": "Error en actualitzar la incidència",
+        "deleteSuccess": "Incidència eliminada correctament",
+        "deleteError": "Error en eliminar la incidència",
+        "form": {
+            "student": "Estudiant",
+            "grade": "Grau d'Incidència",
+            "selectIncidence": "Seleccionar Incidència",
+            "selectStudent": "Seleccionar Estudiant",
+            "description": "Descripció",
+            "submitButton": "Afegir incidència",
+            "updateButton": "Actualitzar incidència",
+            "low": "Baixa",
+            "medium": "Mitjana",
+            "high": "Alta"
+        },
+        "table": {
+            "grade": "Grau",
+            "description": "Descripció",
+            "student": "Estudiant",
+            "date": "Data",
+            "actions": "Accions"
+        }
+    },
+    "modules": {
+        "title": "Mòduls",
+        "subtitle": "Llista de Mòduls",
+        "filter": {
+            "courses": "Cursos",
+            "selectCourse": "Selecciona un curs",
+            "code": "Codi"
+        },
+        "table": {
+            "id": "ID",
+            "name": "Nom",
+            "code": "Codi",
+            "hours": "Hores",
+            "teacher": "Professor",
+            "actions": "Accions"
+        }
+    },
+    "moduleDetails": {
+        "title": "Informació del Mòdul",
+        "subtitle": "Detalls del Mòdul",
+        "code": "Codi del Mòdul",
+        "hours": "Hores",
+        "scope": "Àmbit",
+        "enrolledStudents": "Estudiants Inscrits",
+        "teacher": "Professor",
+        "course": "Curs"
+    },
+    "loginForm": {
+        "title": "Iniciar Sessió",
+        "subtitle": "Accedir",
+        "form": {
+            "resetPassword": "Reiniciar contrasenya",
+            "email": "Correu electrònic",
+            "password": "Contrasenya",
+            "submitButton": "Iniciar sessió",
+            "rememberMe": "Recorda'm"
+        },
+        "errors": {
+            "requiredFields": "Tots els camps són obligatoris",
+            "invalidCredentials": "L'usuari o la contrasenya són incorrectes o no existeixen",
+            "loginFailed": "Error en iniciar sessió"
+        }
+    },
+    "courses": {
+        "title": "Cursos",
+        "subtitle": "Cursos Disponibles",
+        "availableCourses": "Cursos disponibles",
+        "table": {
+            "id": "ID",
+            "name": "Nom",
+            "year": "Any",
+            "tutor": "Tutor",
+            "actions": "Accions"
+        }
+    },
+    "courseDetails": {
+        "tutor": "Tutor",
+        "modules": "Mòduls",
+        "students": "Estudiants",
+        "description": "Descripció",
+        "duration": "Durada"
+    },
+    "addMark": {
+        "title": "Afegir Nota",
+        "form": {
+            "student": "Estudiant",
+            "module": "Mòdul",
+            "mark": "Nota",
+            "selectStudent": "Seleccionar Estudiant",
+            "selectModule": "Seleccionar Mòdul",
+            "selectMark": "Seleccionar Nota",
+            "submitButton": "Afegir nota"
+        },
+        "marks": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        }
+    },
+    "marks": {
+        "title": "Notes",
+        "subtitle": "Llista de Notes",
+        "updateMark": "Actualitzar Nota",
+        "updateSubtitle": "Actualitza la nota de l'estudiant",
+        "confirmUpdate": "Estàs segur que vols actualitzar aquesta nota?",
+        "updateCancelled": "Nota no actualitzada",
+        "updateSuccess": "Nota actualitzada correctament",
+        "updateError": "Error en actualitzar la nota",
+        "noMarkSelected": "No s'ha seleccionat cap nota per actualitzar",
+        "deleteSuccess": "Nota eliminada correctament",
+        "deleteError": "Error en eliminar la nota",
+        "loading": "Carregant notes...",
+        "form": {
+            "updateButton": "Actualitzar nota"
+        },
+        "table": {
+            "module": "Mòdul",
+            "mark": "Nota",
+            "student": "Estudiant",
+            "date": "Data",
+            "actions": "Accions"
+        }
+    },
+    "incidences": {
+        "loading": "Carregant incidències...",
+        "table": {
+            "grade": "Grau",
+            "description": "Descripció",
+            "student": "Estudiant",
+            "date": "Data",
+            "actions": "Accions"
+        }
+    },
+    "undoRegistration": {
+        "title": "Deshabilitar Inscripció",
+        "subtitle": "Deshabilita la inscripció",
+        "button": "Deshabilitar Inscripció",
+        "label": "Seleccionar un curs"
+    },
+    "navigation": {
+        "logout": "Tancar sessió",
+        "home": "Inici",
+        "loginItem": "Iniciar sessió",
+        "register": "Registrar-se",
+        "courses": "Cursos",
+        "modules": "Mòduls",
+        "profile": "Perfil",
+        "myStudents": "Els Meus Estudiants",
+        "registration": "Inscripció",
+        "teachers": "Professorat",
+        "students": "Estudiants",
+        "dashboard": "Tauler",
+        "admin": "Administració",
+        "settings": "Configuració",
+        "undoRegistration": "Deshabilitar inscripció",
+        "undoRegistrationSubtitle": "Deshabilita la inscripció",
+        "undoRegistrationButton": "Deshabilitar inscripció"
+    },
+    "admin": {
+        "dashboard": {
+            "title": "Tauler d'Administració",
+            "subtitle": "Gestió completa del sistema",
+            "users": "Usuaris",
+            "courses": "Cursos",
+            "modules": "Mòduls",
+            "statistics": "Estadístiques"
+        },
+        "deleteTeacher": {
+            "title": "Eliminar Professor",
+            "subtitle": "Eliminar Professor",
+            "selectTeacher": "Seleccionar Professor",
+            "button": "Eliminar Professor",
+            "confirmDelete": "Estàs segur que vols eliminar aquest professor?"
+        },
+        "deleteStudent": {
+            "title": "Eliminar Estudiant",
+            "subtitle": "Eliminar Estudiant",
+            "selectStudent": "Seleccionar Estudiant",
+            "button": "Eliminar Estudiant",
+            "confirmDelete": "Estàs segur que vols eliminar aquest estudiant?"
+        },
+        "deleteModule": {
+            "title": "Eliminar Mòdul",
+            "subtitle": "Eliminar Mòdul",
+            "selectModule": "Seleccionar Mòdul",
+            "button": "Eliminar Mòdul",
+            "confirmDelete": "Estàs segur que vols eliminar aquest mòdul?"
+        },
+        "deleteCourse": {
+            "title": "Eliminar Curs",
+            "subtitle": "Eliminar Curs",
+            "selectCourse": "Seleccionar Curs",
+            "button": "Eliminar Curs",
+            "confirmDelete": "Estàs segur que vols eliminar aquest curs?"
+        },
+        "addTeacher": {
+            "title": "Afegir Professor",
+            "subtitle": "Afegir Nou Professor",
+            "form": {
+                "name": "Nom",
+                "surname": "Cognoms",
+                "email": "Correu electrònic",
+                "password": "Contrasenya",
+                "population": "Població",
+                "populationPlaceholder": "ID de població",
+                "submitButton": "Afegir professor"
+            }
+        },
+        "addModule": {
+            "title": "Afegir Mòdul",
+            "subtitle": "Afegir Nou Mòdul",
+            "form": {
+                "name": "Nom",
+                "code": "Codi",
+                "hours": "Hores",
+                "teacher": "Professor",
+                "scope": "Àmbit",
+                "course": "Curs",
+                "submitButton": "Afegir mòdul"
+            }
+        },
+        "addCourse": {
+            "title": "Afegir Curs",
+            "subtitle": "Afegir Nou Curs",
+            "form": {
+                "name": "Nom",
+                "year": "Any",
+                "tutor": "Tutor",
+                "description": "Descripció",
+                "submitButton": "Afegir curs"
+            }
+        },
+        "updateTeacher": {
+            "title": "Actualitzar Professor",
+            "subtitle": "Actualitzar Dades del Professor"
+        },
+        "updateCourse": {
+            "title": "Actualitzar Curs",
+            "subtitle": "Actualitzar Dades del Curs"
+        },
+        "updateModule": {
+            "title": "Actualitzar Mòdul",
+            "subtitle": "Actualitzar Dades del Mòdul"
+        }
+    },
+    "addIncidence": {
+        "title": "Afegir Incidència",
+        "form": {
+            "student": "Estudiant",
+            "incidenceGrade": "Grau d'Incidència",
+            "description": "Descripció",
+            "selectIncidence": "Seleccionar Incidència",
+            "selectStudent": "Seleccionar Estudiant",
+            "low": "Baixa",
+            "medium": "Mitjana",
+            "high": "Alta",
+            "submitButton": "Afegir incidència"
+        }
+    },
+    "buttons": {
+        "add": "Afegir",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "view": "Veure",
+        "download": "Descarregar",
+        "print": "Imprimir",
+        "export": "Exportar",
+        "import": "Importar",
+        "saveChanges": "Desar canvis",
+        "cancel": "Cancel·lar",
+        "confirm": "Confirmar"
+    },
+    "validation": {
+        "required": "Aquest camp és obligatori",
+        "email": "Introdueix un correu electrònic vàlid",
+        "minLength": "Mínim {count} caràcters",
+        "maxLength": "Màxim {count} caràcters",
+        "passwordMatch": "Les contrasenyes no coincideixen",
+        "number": "Ha de ser un número",
+        "positiveNumber": "Ha de ser un número positiu"
+    },
+    "status": {
+        "active": "Actiu",
+        "inactive": "Inactiu",
+        "pending": "Pendent",
+        "completed": "Completat",
+        "cancelled": "Cancel·lat",
+        "approved": "Aprovat",
+        "rejected": "Rebutjat"
+    },
+    "roles": {
+        "admin": "Administrador",
+        "teacher": "Professor",
+        "student": "Estudiant",
+        "tutor": "Tutor",
+        "parent": "Pare/Mare"
+    },
+    "errors": {
+        "networkError": "Error de connexió. Si us plau, verifica la teva connexió a Internet.",
+        "serverError": "Error del servidor. Si us plau, intenta-ho més tard.",
+        "unauthorized": "No tens permisos per accedir a aquest recurs.",
+        "notFound": "Recurs no trobat.",
+        "badRequest": "Petició incorrecta. Verifica les dades introduïdes."
+    }
+}
