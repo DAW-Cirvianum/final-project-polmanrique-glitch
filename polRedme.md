@@ -17,16 +17,16 @@ El programa està disponible en **català** i **anglès**, sent la major part de
 
 ## Com començar
 
-1. Actualitzar les dependències de React:
+1. Aixecar el contenidor del docker en el Laravel
+
+2. Modificar les dades del mailer en el .env, en concret el gmail i la password 
+
+3. Actualitzar les dependències de React:
 
 ```bash
 npm install
 
-```bash
 npm update
 
 
 
-2. Aixecar el contenidor del docker en el Laravel
-
-3. Modificar les dades del mailer en el .env, en concret el gmail i la password 
