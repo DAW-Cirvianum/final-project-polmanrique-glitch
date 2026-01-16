@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: App.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: App.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState } from 'react'
+import Login from './components/login';
+import { Routes, Route } from 'react-router-dom';
+import Modules from './components/modules';
+import Register from './components/register';
+import ModuleDetails from './components/moduleDatails';
+import Students from './components/students';
+import RegistrationForm from './components/registrationForm';
+import Landing from './components/landingPage';
+import Profile from './components/porfile';
+import AdminDashboard from './components/adminDashboard';
+import AddModule from './components/adminComponents/addModule';
+import AddCourse from './components/adminComponents/addCourse';
+import AddTeacher from './components/adminComponents/addTeacher';
+import Courses from './components/courses';
+import CourseDetails from './components/courseDetails';
+import AssignTutor from './components/adminComponents/assignTutor';
+import DeleteModule from './components/adminComponents/deleteModule';
+import DeleteCourse from './components/adminComponents/deleteCourse';
+import Teachers from './components/teachers';
+import DeleteTeacher from './components/adminComponents/deleteTeacher';
+import DeleteStudent from './components/adminComponents/deleteStudent';
+import MyStudents from './components/myStudents';
+import AddMark from './components/addMark';
+import AddIncidence from './components/addIncidence';
+import SelectNavBar from './components/navBars/selectNabBar.jsx';
+import ChangeLenguage from './components/subComponents/changeLenguage';
+import StudentDetails from './components/studentDetails';
+import UpdateMark from './components/updateMark';
+import UpdateIncidence from './components/updateIncidence';
+import UndoRegistration from './components/undoRegistration';
+import RecoverPassword from './components/recoverPassword';
+import UpdatePassword from './components/updatePassword';
+import UpdateUsername from './components/updateUsername';
+import UpdateEmail from './components/updateMail';
+
+/**
+ * Component principal de l'aplicació.
+ * Gestiona l'encapçalament (Header) i les rutes (Routes) per a la navegació.
+ * @returns {JSX.Element} L'element JSX que representa l'aplicació.
+ */
+function App() {
+
+  return (
+    &lt;div className=''>
+
+      &lt;header>
+        &lt;SelectNavBar />
+        &lt;ChangeLenguage />
+      &lt;/header>
+
+      &lt;Routes>
+
+        {/* ================= PUBLIC ================= */}
+
+        &lt;Route path="/" element={&lt;Landing />} />
+        &lt;Route path="/login" element={&lt;Login />} />
+        &lt;Route path="/register" element={&lt;Register />} />
+        &lt;Route path="/recoverPassword" element={&lt;RecoverPassword />} />
+
+        {/* ================= AUTHENTICATED USER ================= */}
+
+        &lt;Route path="/profile" element={&lt;Profile />} />
+        &lt;Route path="/updateUsername" element={&lt;UpdateUsername />} />
+        &lt;Route path="/updateEmail" element={&lt;UpdateEmail />} />
+        &lt;Route path="/updatePassword" element={&lt;UpdatePassword />} />
+        &lt;Route path="/registration" element={&lt;RegistrationForm />} />
+        &lt;Route path="/undoRegistration" element={&lt;UndoRegistration />} />
+
+        {/* ================= MODULES &amp; COURSES ================= */}
+
+        &lt;Route path="/modules" element={&lt;Modules />} />
+        &lt;Route path="/modules/:id" element={&lt;ModuleDetails />} />
+        &lt;Route path="/courses" element={&lt;Courses />} />
+        &lt;Route path="/courseDetails/:id" element={&lt;CourseDetails />} />
+
+        {/* ================= STUDENTS ================= */}
+
+        &lt;Route path="/students" element={&lt;Students />} />
+        &lt;Route path="/student/:id" element={&lt;StudentDetails />} />
+        &lt;Route path="/myStudents" element={&lt;MyStudents />} />
+
+        {/* ================= MARKS ================= */}
+
+        &lt;Route path="/addMark" element={&lt;AddMark />} />
+        &lt;Route path="/updateMark/:id" element={&lt;UpdateMark />} />
+
+        {/* ================= INCIDENCES ================= */}
+
+        &lt;Route path="/addIncidence" element={&lt;AddIncidence />} />
+        &lt;Route path="/updateIncidence/:id" element={&lt;UpdateIncidence />} />
+
+        {/* ================= TEACHERS ================= */}
+
+        &lt;Route path="/teachers" element={&lt;Teachers />} />
+        &lt;Route path="/assignTutor" element={&lt;AssignTutor />} />
+        &lt;Route path="/deleteTeacher" element={&lt;DeleteTeacher />} />
+
+        {/* ================= ADMIN ================= */}
+
+        &lt;Route path="/dashboard" element={&lt;AdminDashboard />} />
+        &lt;Route path="/admin/addTeacher" element={&lt;AddTeacher />} />
+        &lt;Route path="/admin/addCourse" element={&lt;AddCourse />} />
+        &lt;Route path="/admin/addModule" element={&lt;AddModule />} />
+        &lt;Route path="/deleteCourse" element={&lt;DeleteCourse />} />
+        &lt;Route path="/deleteModule" element={&lt;DeleteModule />} />
+        &lt;Route path="/deleteStudent" element={&lt;DeleteStudent />} />
+
+      &lt;/Routes>
+
+      &lt;footer className='w-full bottom-0 bg-slate-900 p-7 text-center text-white'>
+        &lt;p>© 2025 Projecte Final&lt;/p>
+      &lt;/footer>
+    &lt;/div>
+  )
+}
+
+export default App</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#AuthProvider">AuthProvider</a></li><li><a href="global.html#TokenProvider">TokenProvider</a></li><li><a href="global.html#useAuth">useAuth</a></li><li><a href="global.html#useToken">useToken</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Jan 16 2026 21:45:20 GMT+0100 (hora estándar de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

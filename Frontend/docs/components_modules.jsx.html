@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/modules.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/modules.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Title from "./subComponents/Title";
+import { useTranslation } from "react-i18next";
+
+/**
+ * Component per mostrar la llista de mòduls disponibles.
+ * Permet filtrar per curs i veure el detall de cada mòdul.
+ * @returns {JSX.Element}
+ */
+export default function Modules() {
+    const { t } = useTranslation();
+    const [modules, setModules] = useState([]);
+    const [registration, setRegistration] = useState([]);
+    const [scopes, setScopes] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        async function fetchModules() {
+            const resp = await fetch("http://localhost/api/modules", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem("token"),
+                    "Accept": "application/json",
+                },
+            });
+            const data = await resp.json();
+
+            const resp2 = await fetch("http://localhost/api/scopes", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem("token"),
+                    "Accept": "application/json",
+                },
+            });
+            const data2 = await resp2.json();
+
+            setScopes(data2);
+            setModules(data);
+        }
+        fetchModules();
+    }, []);
+
+    /**
+     * Gestiona el clic en un mòdul.
+     * Guarda la informació del mòdul i navega a la seva pàgina de detalls.
+     * @param {Object} module - L'objecte del mòdul seleccionat.
+     */
+    const onClickModule = async (module) => {
+        const resp = await fetch(`http://localhost/api/modulesByRegistration/${module.id}`, {
+            method: "GET",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token"),
+                "Accept": "application/json",
+            },
+        });
+        const data = await resp.json();
+
+        localStorage.setItem("registration", JSON.stringify(data));
+        localStorage.setItem("module", JSON.stringify(module));
+
+        navigate(`/modules/${module.id}`);
+    };
+
+    /**
+     * Gestiona el canvi en el filtre de cursos.
+     * Actualitza la llista de mòduls segons el curs seleccionat.
+     * @param {string} scopeId - L'ID del curs seleccionat.
+     */
+    const onChangeScope = async (scopeId) => {
+        if (scopeId === "") {
+            const resp = await fetch("http://localhost/api/modules", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem("token"),
+                    "Accept": "application/json",
+                },
+            });
+            const data = await resp.json();
+            setModules(data);
+            return;
+        }
+        const resp = await fetch(`http://localhost/api/filterByScope/${scopeId}`, {
+            method: "GET",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token"),
+                "Accept": "application/json",
+            },
+        });
+        const data = await resp.json();
+        setModules(data);
+    };
+
+    return (
+        &lt;div className="">
+            &lt;Title title={t('modules.title')} subtitle={t('modules.subtitle')} />
+
+            &lt;div className="flex flex-col items-center m-5">
+                &lt;label htmlFor="scopes" className="mb-2 text-lg font-medium text-gray-700">
+                    {t('modules.filter.courses')}
+                &lt;/label>
+                &lt;select id="scopes" className="w-64 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" onChange={(e) => onChangeScope(e.target.value)} >
+                    &lt;option value="">
+                        {t('modules.filter.selectCourse')}
+                    &lt;/option>
+                    {scopes.map((scope) => (
+                        &lt;option key={scope.id} value={scope.id}>
+                            {scope.name}
+                        &lt;/option>
+                    ))}
+                &lt;/select>
+            &lt;/div>
+
+            &lt;hr />
+
+            &lt;div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {modules.map((module) => (
+                    &lt;div
+                        key={module.id}
+                        onClick={() => onClickModule(module)}
+                        className="bg-white border rounded-lg shadow-md p-6 text-left
+                               hover:shadow-xl 
+                               transition-all duration-200 m-5">
+                        &lt;p className="text-xl font-medium mb-2">
+                            {module.name}
+                        &lt;/p>
+
+                        &lt;p className="text-sm text-gray-500">
+                            {t('modules.filter.code')}: {module.code}
+                        &lt;/p>
+                    &lt;/div>
+                ))}
+            &lt;/div>
+        &lt;/div>
+    );
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#AuthProvider">AuthProvider</a></li><li><a href="global.html#TokenProvider">TokenProvider</a></li><li><a href="global.html#useAuth">useAuth</a></li><li><a href="global.html#useToken">useToken</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Jan 16 2026 21:45:20 GMT+0100 (hora estándar de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
