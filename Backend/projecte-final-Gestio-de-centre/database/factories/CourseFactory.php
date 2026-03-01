@@ -20,8 +20,8 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->words(2, true), // Genera un nombre de curso como "Matemáticas Avanzadas"
-            'year' => $this->faker->numberBetween(2020, 2026), // Año entre 2020 y 2026
+            'name' => $this->faker->words(2, true), 
+            'year' => $this->faker->numberBetween(2020, 2026), 
         ];
     }
 }

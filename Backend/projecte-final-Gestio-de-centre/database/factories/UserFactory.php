@@ -25,9 +25,9 @@ class UserFactory extends Factory
             'name' => $this->faker->firstName,
             'surname' => $this->faker->lastName,
             'email' => $this->faker->unique()->safeEmail,
-            'password' => 'password123', // se hash automáticamente gracias a tu modelo
+            'password' => 'password123', 
             'rol' => $this->faker->randomElement($roles),
-            'population_id' => 1, // Cambiar si quieres asignar aleatoriamente poblaciones
+            'population_id' => 1, 
         ];
     }
 }

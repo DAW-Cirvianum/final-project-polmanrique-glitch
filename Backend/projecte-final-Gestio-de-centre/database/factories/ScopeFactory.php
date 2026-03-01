@@ -20,8 +20,8 @@ class ScopeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word, // Nombre corto del scope
-            'description' => $this->faker->sentence(6), // Descripción breve
+            'name' => $this->faker->word, 
+            'description' => $this->faker->sentence(6), 
         ];
     }
 }

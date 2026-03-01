@@ -46,33 +46,33 @@ class userController extends Controller
      *     )
      * )
      */
-    public function store(Request $request)
-    {
-        $validator = ValidatorFacade::make($request->all(), [
-            'name' => 'string',
-            'surname' => 'string',
-            'email' => 'string',
-            'rol' => 'string',
-        ]);
+    // public function store(Request $request)
+    // {
+    //     $validator = ValidatorFacade::make($request->all(), [
+    //         'name' => 'string',
+    //         'surname' => 'string',
+    //         'email' => 'string',
+    //         'rol' => 'string',
+    //     ]);
 
-        if ($validator->fails()) {
-            return response()->json($validator->errors(), 400);
-        }
+    //     if ($validator->fails()) {
+    //         return response()->json($validator->errors(), 400);
+    //     }
 
-        $user = User::create([
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'rol' => $request->rol,
-            'population_id' => $request->population_id,
-        ]);
+    //     $user = User::create([
+    //         'name' => $request->name,
+    //         'surname' => $request->surname,
+    //         'email' => $request->email,
+    //         'password' => Hash::make($request->password),
+    //         'rol' => $request->rol,
+    //         'population_id' => $request->population_id,
+    //     ]);
 
-        return (response()->json([
-            'message' => 'User created',
-            'user' => $user
-        ], 200));
-    }
+    //     return (response()->json([
+    //         'message' => 'User created',
+    //         'user' => $user
+    //     ], 200));
+    // }
 
     /**
      * @OA\Post(

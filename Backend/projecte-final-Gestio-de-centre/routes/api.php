@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\courseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -75,7 +76,6 @@ Route::middleware(["auth:sanctum"])->group(function () {
 
 
 
-    Route::post('/user', [userController::class, 'store'])->name('register.user');
     Route::get('/user', [userController::class, 'getUser']);
 });
 
@@ -129,7 +129,8 @@ Route::get('/assignTutor', [viewController::class, 'showAssignTutorForm']);
 
 //Auth routes
 
-Route::post('/login', [userController::class, 'log'])->name('login');
+Route::post('auth/user', [AuthController::class, 'store'])->name('register.user');
+Route::post('auth/login', [AuthController::class, 'log'])->name('login');
 Route::post('/send-reset-password', [UserController::class, 'sendResetPassword']);
 
 

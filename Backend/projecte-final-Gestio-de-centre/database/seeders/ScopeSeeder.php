@@ -16,19 +16,16 @@ class ScopeSeeder extends Seeder
         Scope::create([
             'name' => 'Àmbit 1',
             'description' => 'Descripció de l\'àmbit 1',
-            'module_id' => 1,
         ]);
 
         Scope::create([
             'name' => 'Àmbit 2',
             'description' => 'Descripció de l\'àmbit 2',
-            'module_id' => 1,
         ]);
 
         Scope::create([
             'name' => 'Àmbit 3',
             'description' => 'Descripció de l\'àmbit 3',
-            'module_id' => 1,
         ]);
     }
 }

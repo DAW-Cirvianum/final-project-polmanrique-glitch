@@ -23,9 +23,9 @@ class ModuleFactory extends Factory
             'name' => 'Mòdul ' . $this->faker->unique()->numberBetween(1, 50),
             'code' => 'MOD' . $this->faker->unique()->numberBetween(100, 999),
             'hours' => $this->faker->numberBetween(10, 50),
-            'teacher_id' => 1, // Puedes cambiarlo por un ID aleatorio de tabla users donde rol = 'teacher'
-            'scope_id' => 1,   // Si tienes scopes, cambiarlo por ID real o random
-            'course_id' => 1,  // Si quieres, puedes asociarlo dinámicamente con Course::factory()
+            'teacher_id' => 1, 
+            'scope_id' => 1,   
+            'course_id' => 1, 
         ];
     }
 }

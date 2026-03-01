@@ -19,7 +19,7 @@
 
         <label for="user_id" class="block text-gray-700 font-medium mb-2">Seleccionar Usuario:</label>
         <select name="user_id" id="user_id" required class="w-full p-2 border border-gray-300 rounded mb-4">
-            <option value="">-- Seleccione un usuario --</option>
+            <option value=""> Tria un usuari </option>
             @foreach($users as $user)
                 @if($user->rol !== 'admin')
                     <option value="{{ $user->id }}">
@@ -30,19 +30,19 @@
         </select>
 
         <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-            Hacer Administrador
+            Fer Administrador
         </button>
     </form>
 
     <hr class="my-8">
 
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Lista de Usuarios</h2>
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Llista d'Usuaris</h2>
 
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-300">
             <thead class="bg-gray-100">
                 <tr>
-                    <th class="py-3 px-4 border-b text-left">Nombre</th>
+                    <th class="py-3 px-4 border-b text-left">Nom</th>
                     <th class="py-3 px-4 border-b text-left">Email</th>
                     <th class="py-3 px-4 border-b text-left">Rol</th>
                 </tr>
@@ -54,12 +54,12 @@
                         <td class="py-3 px-4 border-b">{{ $user->email }}</td>
                         <td class="py-3 px-4 border-b">
                             @if($user->rol === 'admin')
-                                <span class="px-2 py-1 bg-red-100 text-red-800 text-sm font-medium rounded">
+                                <span class="px-2 py-1  text-red-800 text-sm font-medium rounded">
                                     ADMIN
                                 </span>
                             @else
-                                <span class="px-2 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded">
-                                    Usuario
+                                <span class="px-2 py-1 text-gray-800 text-sm font-medium rounded">
+                                    Usuari
                                 </span>
                             @endif
                         </td>
